@@ -1,0 +1,39 @@
+{
+  "name": "genpark-agent-context-handoff-state-packer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Lossless context packaging and state handoff protocol between autonomous subagents preventing token drift.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "multi-agent",
+  "tags": [
+    "openai-swarm",
+    "context-handoff",
+    "state-packer",
+    "langgraph",
+    "agent-transfer"
+  ],
+  "inputs": {
+    "source_agent": {
+      "type": "string"
+    },
+    "target_agent": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "envelope_id": {
+      "type": "string"
+    },
+    "checksum_sha256": {
+      "type": "string"
+    },
+    "estimated_tokens": {
+      "type": "integer"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
